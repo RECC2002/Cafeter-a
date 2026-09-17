@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Iniciar sesión{% endblock %}
+{% block header_title %}Entra a la cafetería{% endblock %}
+{% block content %}
+<section class="auth-layout">
+  <div class="hero-card hero-image-card">
+    <img src="https://i.pinimg.com/736x/50/7b/b4/507bb4352c6cb87ae99ecc83698c80c2.jpg" alt="Cafetería virtual" class="hero-illustration">
+  </div>
+  <form class="auth-card" method="post">
+    <label>Correo</label>
+    <input type="email" name="email" placeholder="correo@x.com" required>
+    <label>Contraseña</label>
+    <input type="password" name="password" placeholder="Tu contraseña" required>
+    <button class="btn primary" type="submit">Iniciar sesión</button>
+    <p class="muted">¿No tienes cuenta? <a href="{{ url_for('register') }}">Regístrate</a></p>
+  </form>
+</section>
+{% endblock %}
